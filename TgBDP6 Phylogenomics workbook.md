@@ -118,5 +118,15 @@ Next, I moved into the newly created directed to begin my analysis:
               awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' CF001835.fa > Cytauxzoon_felis.fa
               awk '/^>/{print "> Cytauxzoon_felis " ++i; next}{print}' Cytauxzoon_felis.fa > header_Cytauxzoon_felis.fa
 
-          
+        cat header_Toxoplasma_gondii.fa header_Hammondia_hammondi.fa header_Besnoitia_besnoiti.fa header_Cystoisospora_suis.fa header_Sarcocystis_neurona.fa header_Cyclospora_cayetanensis.fa header_Eimeria_falciformis.fa header_Eimeria_maxima.fa header_Eimeria_acervulina.fa header_Cryptosporidium_muris.fa header_Cryptosporidium_andersoni.fa header_Babesia_bigemina.fa header_Theileria_orientalis.fa header_Babesia_bovis.fa header_Theileria_equi.fa header_Cryptosporidium_hominis.fa header_Cryptosporidium_parvum.fa header_Cryptosporidium_tyzzeri.fa header_Cryptosporidium_ubiquitum.fa header_Cryptosporidium_meleagridis.fa header_Babesia_divergens.fa header_Eimeria_necatrix.fa header_Cytauxzoon_felis.fa > TGBDP6_Phylogenetics_Tree.fa
+
+	mafft --auto TGBDP6_Phylogenetics_Tree.fa > Output_TGBDP6_Phylogenetics_Tree.fa
+	iqtree -s Output_TGBDP6_Phylogenetics_Tree.fa -m LG -bb 1000 -pre output
+	cat output.contree
+	
+	
+	
+	
+	(Toxoplasma_gondii_ME491:0.046906,Hammondia_hammondi_HH341:0.058573,(Besnoitia_besnoiti_Bb-Ger11:0.347050,(Sarcocystis_neurona1:0.566032,(((Cyclospora_cayetanensis1:0.336473,Eimeria_falciformis1:0.247412)85:0.071468,((Eimeria_maxima1:0.310487,Eimeria_acervulina1:0.149560)87:0.038062,Eimeria_necatrix1:0.193124)90:0.059766)100:0.483250,(((Cryptosporidium_muris1:0.015800,Cryptosporidium_andersoni1:0.016037)100:0.517879,(((Cryptosporidium_hominis1:0.010400,(Cryptosporidium_parvum1:0.009772,Cryptosporidium_tyzzeri:0.010623)99:0.004128)100:0.020289,Cryptosporidium_meleagridis1:0.042716)100:0.108773,Cryptosporidium_ubiquitum:0.108001)100:0.449123)100:0.778738,(((Babesia_bigemina1:0.379394,Babesia_divergens1:0.461547)100:0.153661,Babesia_bovis1:0.555256)100:0.290630,(Theileria_orientalis1:0.832565,(Theileria_equi1:0.394856,Cytauxzoon_felis:0.518317)100:0.206829)100:0.254584)100:0.583447)100:0.537649)99:0.190426)100:0.430465)100:0.354310);
+
 # Results from NCBI
