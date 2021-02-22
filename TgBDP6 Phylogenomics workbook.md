@@ -79,15 +79,35 @@ Next, I moved into the newly created directed to begin my analysis:
               awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' CMU_007550.fa > Cryptosporidium_muris.fa
               awk '/^>/{print "> Cryptosporidium_muris" ++i; next}{print}' Cryptosporidium_muris.fa > header_Cryptosporidium_muris.fa
           # Cryptosporidium andersoni isolate 30847: cand_006010
+	  	awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' cand_006010.fa > Cryptosporidium_andersoni.fa
+		awk '/^>/{print "> Cryptosporidium_andersoni" ++i; next}{print}' Cryptosporidium_andersoni.fa > header_Cryptosporidium_andersoni.fa
           # Babesia bigemina strain BOND: BBBOND_0100670
+	  	awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}'BBBOND_0100670.fa > Babesia_bigemina.fa
+		awk '/^>/{print "> Babesia_bigemina" ++i; next}{print}' Babesia_bigemina.fa > header_Babesia_bigemina.fa
           # Theileria orientalis strain Shintoku: TOT_010000975
+	  	awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' TOT_010000975.fa > Theileria_orientalis.fa
+		awk '/^>/{print "> Theileria_orientalis" ++i; next}{print}' Theileria_orientalis.fa > header_Theileria_orientalis.fa
           # Babesia bovis T2Bo: BBOV_IV004000
+	  	awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' BBOV_IV004000.fa > Babesia_bovis.fa
+		awk '/^>/{print "> Babesia_bovis" ++i; next}{print}' Babesia_bovis.fa > header_Babesia_bovis.fa
           # Theileria equi strain WA BEWA_042410
+	  	awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' BEWA_042410.fa > Theileria_equi.fa
+		awk '/^>/{print "> Theileria_equi" ++i; next}{print}' Theileria_equi.fa > header_Theileria_equi.fa
           # Cryptosporidium hominis UdeA01 CHUDEA6_2320
+	  	awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' CHUDEA6_2320.fa > Cryptosporidium_hominis.fa
+		awk '/^>/{print "> Cryptosporidium_hominis" ++i; next}{print}' Cryptosporidium_hominis.fa > header_Cryptosporidium_hominis.fa
           # Cryptosporidium parvum IOWA-ATCC  CPATCC_0013840
+	  	awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' CPATCC_0013840.fa > Cryptosporidium_parvum.fa
+		awk '/^>/{print "> Cryptosporidium_parvum" ++i; next}{print}' Cryptosporidium_parvum.fa > header_Cryptosporidium_parvum.fa
           # Cryptosporidium tyzzeri isolate UGA55: CTYZ_00001415
+	  	awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' CTYZ_00001415.fa > Cryptosporidium_tyzzeri.fa
+		awk '/^>/{print "> Cryptosporidium_tyzzeri " ++i; next}{print}' Cryptosporidium_tyzzeri.fa > header_Cryptosporidium_tyzzeri.fa
           # Cryptosporidium ubiquitum isolate 39726:cubi_02356
+	  	awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' cubi_02356.fa > Cryptosporidium_ubiquitum.fa
+		awk '/^>/{print "> Cryptosporidium_ubiquitum " ++i; next}{print}' Cryptosporidium_ubiquitum.fa > header_Cryptosporidium_ubiquitum.fa
           # Cryptosporidium meleagridis strain UKMEL1: CmeUKMEL1_12945
+	  	awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' CmeUKMEL1_12945.fa > Cryptosporidium_meleagridis.fa
+		awk '/^>/{print "> Cryptosporidium_meleagridis" ++i; next}{print}' Cryptosporidium_meleagridis.fa > header_Cryptosporidium_meleagridis.fa
           # Babesia divergens strain 1802A: Bdiv_029230
               awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' Bdiv_029230.fa > Babesia_divergens.fa
               awk '/^>/{print "> Babesia_divergens" ++i; next}{print}' Babesia_divergens.fa > header_Babesia_divergens.fa
