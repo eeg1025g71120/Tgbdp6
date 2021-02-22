@@ -13,7 +13,7 @@ This is a workbook detailing the methods and steps utilized in this bioinformati
     * Databases Utalized:
       *  VEuPathDB (https://veupathdb.org/veupathdb/app)
       *   UniProtKB (https://www.uniprot.org/)
-Results from BLAST fr EUPATHdb
+# Results from BLAST fr EUPATHdb
 * 	Hammondia hammondi strain H.H.34: HHA_311625
 *   Besnoitia besnoiti strain Bb-Ger1: BESB_072950
 *	Cystoisospora suis strain Wien I: CSUI_000595
@@ -36,5 +36,67 @@ Results from BLAST fr EUPATHdb
 * Babesia divergens strain 1802A: Bdiv_029230
 * Eimeria necatrix Houghton ENH_00053350
 * Cytauxzoon felis strain Winnie CF001835
+# Setting up for the Phylogenomic Analysis:
+First I created a new directory to begin my analysis in:
+	
+	mkdir TgBDP6
+		
+Next, I moved into the newly created directed to begin my analysis:
+	
+	cd TgBDP6
 
+# Phylogenomics Analysis of TGBDP4 predicted protein sequence within Aplicomplexians 
+
+      # Phylogenetic
+          #Toxoplasma gondii ME49
+              awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' TGME49_311625.fa > Toxoplasma_gondii.fa
+              awk '/^>/{print ">Toxoplasma_gondii_ME49" ++i; next}{print}' Toxoplasma_gondii.fa > header_Toxoplasma_gondii.fa
+          # Hammondia hammondi strain H.H.34: HHA_311625
+              awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' HHA_311625.fa > Hammondia_hammondi.fa
+              awk '/^>/{print "> Hammondia_hammondi_HH34" ++i; next}{print}' Hammondia_hammondi.fa > header_Hammondia_hammondi.fa
+          # Besnoitia besnoiti strain Bb-Ger1: BESB_072950
+              awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' BESB_072950.fa > Besnoitia_besnoiti.fa
+              awk '/^>/{print "> Besnoitia_besnoiti_Bb-Ger1" ++i; next}{print}' Besnoitia_besnoiti.fa > header_Besnoitia_besnoiti.fa
+           # Cystoisospora suis strain Wien I: CSUI_000595
+              awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' CSUI_000595 .fa > Cystoisospora_suis.fa
+              awk '/^>/{print "> Cystoisospora_suis" ++i; next}{print}' Cystoisospora_suis.fa > header_Cystoisospora_suis.fa
+          # Sarcocystis neurona SN3: SN3_00801045
+              awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' SN3_00801045.fa > Sarcocystis_neurona.fa
+              awk '/^>/{print "> Sarcocystis_neurona" ++i; next}{print}' Sarcocystis_neurona.fa > header_Sarcocystis_neurona.fa
+          # Cyclospora cayetanensis isolate NF1_C8: LOC34618198
+              awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' LOC34618198.fa > Cyclospora_cayetanensis.fa
+              awk '/^>/{print "> Cyclospora_cayetanensis" ++i; next}{print}' Cyclospora_cayetanensis.fa > header_Cyclospora_cayetanensis.fa
+          # Eimeria falciformis Bayer Haberkorn 1970: EfaB_MINUS_25458
+              awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' EfaB_MINUS_25458.fa> Eimeria_falciformis.fa
+              awk '/^>/{print "> Eimeria_falciformis" ++i; next}{print}' Eimeria_falciformis.fa > header_Eimeria_falciformis.fa
+          # Eimeria maxima Weybridge: EMWEY_00047460
+              awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' EMWEY_00047460.fa > Eimeria_maxima.fa
+              awk '/^>/{print "> Eimeria_maxima" ++i; next}{print}' Eimeria_maxima.fa > header_Eimeria_maxima.fa
+          # Eimeria acervulina Houghton: EAH_00038960
+              awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' EAH_00038960.fa > Eimeria_acervulina.fa
+              awk '/^>/{print "> Eimeria_acervulina" ++i; next}{print}' Eimeria_acervulina.fa > header_Eimeria_acervulina.fa
+          # Cryptosporidium muris RN66: CMU_007550
+              awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' CMU_007550.fa > Cryptosporidium_muris.fa
+              awk '/^>/{print "> Cryptosporidium_muris" ++i; next}{print}' Cryptosporidium_muris.fa > header_Cryptosporidium_muris.fa
+          # Cryptosporidium andersoni isolate 30847: cand_006010
+          # Babesia bigemina strain BOND: BBBOND_0100670
+          # Theileria orientalis strain Shintoku: TOT_010000975
+          # Babesia bovis T2Bo: BBOV_IV004000
+          # Theileria equi strain WA BEWA_042410
+          # Cryptosporidium hominis UdeA01 CHUDEA6_2320
+          # Cryptosporidium parvum IOWA-ATCC  CPATCC_0013840
+          # Cryptosporidium tyzzeri isolate UGA55: CTYZ_00001415
+          # Cryptosporidium ubiquitum isolate 39726:cubi_02356
+          # Cryptosporidium meleagridis strain UKMEL1: CmeUKMEL1_12945
+          # Babesia divergens strain 1802A: Bdiv_029230
+              awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' Bdiv_029230.fa > Babesia_divergens.fa
+              awk '/^>/{print "> Babesia_divergens" ++i; next}{print}' Babesia_divergens.fa > header_Babesia_divergens.fa
+          # Eimeria necatrix Houghton ENH_00053350
+              awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' ENH_00053350.fa > Eimeria_necatrix.fa
+              awk '/^>/{print "> Eimeria_necatrix" ++i; next}{print}' Eimeria_necatrix.fa > header_Eimeria_necatrix.fa
+          # Cytauxzoon felis strain Winnie CF001835
+              awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' CF001835.fa > Cytauxzoon_felis.fa
+              awk '/^>/{print "> Cytauxzoon_felis " ++i; next}{print}' Cytauxzoon_felis.fa > header_Cytauxzoon_felis.fa
+
+          
 # Results from NCBI
