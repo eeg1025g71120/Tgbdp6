@@ -137,12 +137,20 @@ Next, I moved into the newly created directed to begin my analysis:
           awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' TGME49_311625.fa > Toxoplasma_gondii.fa
           awk '/^>/{print ">Toxoplasma_gondii_ME49" ++i; next}{print}' Toxoplasma_gondii.fa > header_Toxoplasma_gondii.fa
     
-  # Hepatospora eriocheir strain canceri: A0H76_1719
-          
-#Amphiamblys sp. WSBS2006: A8A55_1843
-
-#Nosema ceranae strain PA08_1199: AAJ76_200067555
-# Acanthamoeba castellanii str. Neff : ACA1_067440
+ 	 # Hepatospora eriocheir strain canceri: A0H76_1719
+  		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' A0H76_1719.fa > Hepatospora_eriocheir.fa
+          awk '/^>/{print ">Hepatospora_eriocheir" ++i; next}{print}' Hepatospora_eriocheir.fa > header_Hepatospora_eriocheir.fa
+         
+	#Amphiamblys sp. WSBS2006: A8A55_1843
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' A8A55_1843.fa > Amphiamblys_sp.fa
+          awk '/^>/{print ">Amphiamblys_sp" ++i; next}{print}' Amphiamblys_sp.fa > header_Amphiamblys_sp.fa
+	
+	#Nosema ceranae strain PA08_1199: AAJ76_200067555
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' AAJ76_200067555.fa > Nosema_ceranae.fa
+          awk '/^>/{print ">Nosema_ceranae" ++i; next}{print}' Nosema_ceranae.fa > header_Nosema_ceranae.fa
+	# Acanthamoeba castellanii str. Neff : ACA1_067440
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}'  ACA1_067440.fa > Acanthamoeba_castellanii.fa
+          awk '/^>/{print ">Acanthamoeba_castellanii" ++i; next}{print}' Acanthamoeba_castellanii.fa > header_Acanthamoeba_castellanii.fa
 # Encephalitozoon cuniculi EC1: AEWD_051510
 # Babesia bigemina strain BOND: BBBOND_0100670
 # Babesia bovis T2Bo: BBOV_IV004000
