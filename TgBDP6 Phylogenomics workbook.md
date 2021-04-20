@@ -130,3 +130,62 @@ Next, I moved into the newly created directed to begin my analysis:
 	(Toxoplasma_gondii_ME491:0.046906,Hammondia_hammondi_HH341:0.058573,(Besnoitia_besnoiti_Bb-Ger11:0.347050,(Sarcocystis_neurona1:0.566032,(((Cyclospora_cayetanensis1:0.336473,Eimeria_falciformis1:0.247412)85:0.071468,((Eimeria_maxima1:0.310487,Eimeria_acervulina1:0.149560)87:0.038062,Eimeria_necatrix1:0.193124)90:0.059766)100:0.483250,(((Cryptosporidium_muris1:0.015800,Cryptosporidium_andersoni1:0.016037)100:0.517879,(((Cryptosporidium_hominis1:0.010400,(Cryptosporidium_parvum1:0.009772,Cryptosporidium_tyzzeri:0.010623)99:0.004128)100:0.020289,Cryptosporidium_meleagridis1:0.042716)100:0.108773,Cryptosporidium_ubiquitum:0.108001)100:0.449123)100:0.778738,(((Babesia_bigemina1:0.379394,Babesia_divergens1:0.461547)100:0.153661,Babesia_bovis1:0.555256)100:0.290630,(Theileria_orientalis1:0.832565,(Theileria_equi1:0.394856,Cytauxzoon_felis:0.518317)100:0.206829)100:0.254584)100:0.583447)100:0.537649)99:0.190426)100:0.430465)100:0.354310);
 
 # Results from NCBI
+
+# Extended data set Phylogenic Tree
+
+		 #Toxoplasma gondii ME49
+          awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' TGME49_311625.fa > Toxoplasma_gondii.fa
+          awk '/^>/{print ">Toxoplasma_gondii_ME49" ++i; next}{print}' Toxoplasma_gondii.fa > header_Toxoplasma_gondii.fa
+    
+  # Hepatospora eriocheir strain canceri: A0H76_1719
+          
+#Amphiamblys sp. WSBS2006: A8A55_1843
+
+#Nosema ceranae strain PA08_1199: AAJ76_200067555
+# Acanthamoeba castellanii str. Neff : ACA1_067440
+# Encephalitozoon cuniculi EC1: AEWD_051510
+# Babesia bigemina strain BOND: BBBOND_0100670
+# Babesia bovis T2Bo: BBOV_IV004000
+# Theileria equi strain WA: BEWA_042410
+# Babesia microti strain RI: BMR1_01G00076
+# Babesia ovata strain Miyake: BOVATA_026070
+# Babesia divergens strain 1802A: Bdiv_029230
+# Cryptosporidium ubiquitum isolate 39726 : cubi_02356 
+# Cryptosporidium parvum Iowa II: cgd6_2320
+#Cryptosporidium andersoni isolate 30847: cand_006010
+# Vitrella brassicaformis CCMP3155: Vbra_11206
+# Vittaforma corneae ATCC 50505: VICG_00309
+# Theileria parva strain Muguga: TP01_1030
+# Theileria orientalis strain Shintoku: TOT_010000975
+#Theileria annulata strain Ankara: TA16925
+# Saprolegnia parasitica CBS 223.65: SPRG_12989
+# Spraguea lophii 42_110: SLOPH_2073
+# Nematocida ausubeli ERTm2: NERG_01521
+# Cytauxzoon felis strain Winnie: CF001835
+#  Cryptosporidium hominis UdeA01: CHUDEA6_2320
+# Cryptosporidium muris RN66: CMU_007550
+# Cryptosporidium tyzzeri isolate UGA55: CTYZ_00001415
+# Cryptosporidium meleagridis strain UKMEL1: CmeUKMEL1_12945
+# Chromera velia CCMP2878: Cvel_9760 
+# Mitosporidium daphniae UGP3: DI09_160p40
+# Enterocytozoon bieneusi H348: EBI_27476
+# Enterospora canceri strain GB1: ECANGB1_970
+# Encephalitozoon hellem ATCC 50504: EHEL_081170
+# Entamoeba histolytica HM-1:IMSS: EHI_146100
+#  Enterocytozoon hepatopenaei strain TH1: EHP00_2617
+# Entamoeba moshkovskii Laredo: EMO_100830 
+# Mus musculus C57BL6J: ENSMUSG00000022914.15
+# Entamoeba nuttalli P19: ENU1_033640 
+
+# Nematocida parisii : NEPG_00799 
+# Nematocida displodere strain JUm2807: NEDG_00342
+# Nosema bombycis CQ1: NBO_74g0002 
+# Naegleria gruberi strain NEG-M: NAEGRDRAFT_78346  
+# Monocercomonoides exilis PA203: MONOS_15088 
+# Encephalitozoon romaleae SJ-2008: EROM_081190 
+# Encephalitozoon intestinalis ATCC 50506: Eint_081180 
+# Aphanomyces astaci strain APO3: H257_13465 
+# Aphanomyces invadans NJM9701: H310_06274 
+# Anncaliia algerae PRA109: H311_04671 
+# Ordospora colligata OC4: M896_091190 
+
