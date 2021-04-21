@@ -151,16 +151,37 @@ Next, I moved into the newly created directed to begin my analysis:
 	# Acanthamoeba castellanii str. Neff : ACA1_067440
 		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}'  ACA1_067440.fa > Acanthamoeba_castellanii.fa
           awk '/^>/{print ">Acanthamoeba_castellanii" ++i; next}{print}' Acanthamoeba_castellanii.fa > header_Acanthamoeba_castellanii.fa
-# Encephalitozoon cuniculi EC1: AEWD_051510
-# Babesia bigemina strain BOND: BBBOND_0100670
-# Babesia bovis T2Bo: BBOV_IV004000
-# Theileria equi strain WA: BEWA_042410
-# Babesia microti strain RI: BMR1_01G00076
-# Babesia ovata strain Miyake: BOVATA_026070
-# Babesia divergens strain 1802A: Bdiv_029230
-# Cryptosporidium ubiquitum isolate 39726 : cubi_02356 
-# Cryptosporidium parvum Iowa II: cgd6_2320
-#Cryptosporidium andersoni isolate 30847: cand_006010
+	# Encephalitozoon cuniculi EC1: AEWD_051510
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}'  AEWD_051510.fa > Encephalitozoon_cuniculi.fa
+          awk '/^>/{print ">Encephalitozoon_cuniculi" ++i; next}{print}' Encephalitozoon_cuniculi.fa > header_Encephalitozoon_cuniculi.fa
+	# Babesia bigemina strain BOND: BBBOND_0100670
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' BBBOND_0100670.fa > Babesia_bigemina.fa
+          awk '/^>/{print ">Babesia_bigemina" ++i; next}{print}' Babesia_bigemina.fa > header_Babesia_bigemina.fa
+	# Babesia bovis T2Bo: BBOV_IV004000
+	awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' BBOV_IV004000.fa > Babesia_bovis.fa
+		  awk '/^>/{print ">Babesia_bovis" ++i; next}{print}' Babesia_bovis.fa > header_Babesia_bovis.fa
+	# Theileria equi strain WA: BEWA_042410
+	awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' BEWA_042410.fa > Theileria_equi.fa
+			  awk '/^>/{print ">Theileria_equi" ++i; next}{print}' Theileria_equi.fa > header_Theileria_equi.fa
+	# Babesia microti strain RI: BMR1_01G00076
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' BMR1_01G00076.fa > Babesia_microti.fa
+			  awk '/^>/{print ">Babesia_microti" ++i; next}{print}' Babesia_microti.fa > header_Babesia_microti.fa
+	# Babesia ovata strain Miyake: BOVATA_026070
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' BOVATA_026070.fa > Babesia_ovata.fa
+				  awk '/^>/{print ">Babesia_ovata" ++i; next}{print}' Babesia_ovata.fa > header_Babesia_ovata.fa
+	# Babesia divergens strain 1802A: Bdiv_029230
+			awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' Bdiv_029230.fa > Babesia_divergens.fa
+					  awk '/^>/{print ">Babesia_divergens" ++i; next}{print}' Babesia_divergens.fa > header_Babesia_divergens.fa
+	# Cryptosporidium ubiquitum isolate 39726 : cubi_02356 
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' cubi_02356.fa > Cryptosporidium_ubiquitum.fa
+		 awk '/^>/{print ">Babesia_divergens" ++i; next}{print}' Babesia_divergens.fa > header_Babesia_divergens.fa
+	# Cryptosporidium parvum Iowa II: cgd6_2320
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' cgd6_2320.fa > Cryptosporidium_parvum.fa
+			 awk '/^>/{print ">Cryptosporidium_parvum" ++i; next}{print}' Cryptosporidium_parvum.fa > header_Cryptosporidium_parvum.fa
+	#Cryptosporidium andersoni isolate 30847: cand_006010
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' cand_006010.fa > Cryptosporidium_andersoni.fa
+		awk '/^>/{print ">Cryptosporidium_andersoni" ++i; next}{print}' Cryptosporidium_andersoni.fa > header_Cryptosporidium_andersoni.fa
+
 # Vitrella brassicaformis CCMP3155: Vbra_11206
 # Vittaforma corneae ATCC 50505: VICG_00309
 # Theileria parva strain Muguga: TP01_1030
@@ -196,4 +217,3 @@ Next, I moved into the newly created directed to begin my analysis:
 # Aphanomyces invadans NJM9701: H310_06274 
 # Anncaliia algerae PRA109: H311_04671 
 # Ordospora colligata OC4: M896_091190 
-
