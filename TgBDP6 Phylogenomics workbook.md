@@ -181,21 +181,47 @@ Next, I moved into the newly created directed to begin my analysis:
 	#Cryptosporidium andersoni isolate 30847: cand_006010
 		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' cand_006010.fa > Cryptosporidium_andersoni.fa
 		awk '/^>/{print ">Cryptosporidium_andersoni" ++i; next}{print}' Cryptosporidium_andersoni.fa > header_Cryptosporidium_andersoni.fa
-# Vitrella brassicaformis CCMP3155: Vbra_11206
-# Vittaforma corneae ATCC 50505: VICG_00309
-# Theileria parva strain Muguga: TP01_1030
-# Theileria orientalis strain Shintoku: TOT_010000975
-#Theileria annulata strain Ankara: TA16925
+	# Vitrella brassicaformis CCMP3155: Vbra_11206
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' Vbra_11206.fa > Vitrella_brassicaformis.fa
+			awk '/^>/{print ">Vitrella_brassicaformis" ++i; next}{print}' Vitrella_brassicaformis.fa > header_Vitrella_brassicaformis.fa
+	# Vittaforma corneae ATCC 50505: VICG_00309
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' VICG_00309.fa > Vittaforma_corneae.fa
+		awk '/^>/{print ">Vittaforma_corneae" ++i; next}{print}' Vittaforma_corneae.fa > header_Vittaforma_corneae.fa
+	# Theileria parva strain Muguga: TP01_1030
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' TP01_1030.fa > Theileria_parva.fa
+		awk '/^>/{print ">Theileria_parva" ++i; next}{print}' Theileria_parva.fa > header_Theileria_parva.fa
+	# Theileria orientalis strain Shintoku: TOT_010000975
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' TOT_010000975.fa > Theileria_orientalis.fa
+		awk '/^>/{print ">Theileria_orientalis" ++i; next}{print}' Theileria_orientalis.fa > header_Theileria_orientalis.fa
+	# Theileria annulata strain Ankara: TA16925
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' TA16925.fa > Theileria_annulata.fa
+		awk '/^>/{print ">Theileria_annulata" ++i; next}{print}' Theileria_annulata.fa > header_Theileria_annulata.fa
+	# Saprolegnia parasitica CBS 223.65: SPRG_12989
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' SPRG_12989.fa > Saprolegnia_parasitica.fa
+		awk '/^>/{print ">Saprolegnia_parasitica" ++i; next}{print}' Saprolegnia_parasitica.fa > header_Saprolegnia_parasitica.fa
+	# Spraguea lophii 42_110: SLOPH_2073
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' SLOPH_2073.fa > Spraguea_lophii.fa
+		awk '/^>/{print ">Spraguea_lophii" ++i; next}{print}' Spraguea_lophii.fa > header_Spraguea_lophii.fa
+	# Nematocida ausubeli ERTm2: NERG_01521
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' NERG_01521.fa > Nematocida_ausubeli.fa
+		awk '/^>/{print ">Nematocida_ausubeli" ++i; next}{print}' Nematocida_ausubeli.fa > header_Nematocida_ausubeli.fa
+	# Cytauxzoon felis strain Winnie: CF001835
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' CF001835.fa > Cytauxzoon_felis.fa
+			awk '/^>/{print ">Cytauxzoon_felis" ++i; next}{print}' Cytauxzoon_felis.fa > header_Cytauxzoon_felis.fa
+	#  Cryptosporidium hominis UdeA01: CHUDEA6_2320
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' CHUDEA6_2320.fa > Cryptosporidium_hominis.fa
+		awk '/^>/{print ">Cryptosporidium_hominis" ++i; next}{print}' Cryptosporidium_hominis.fa > header_Cryptosporidium_hominis.fa
+	# Cryptosporidium muris RN66: CMU_007550
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' CMU_007550.fa > Cryptosporidium_muris.fa
+			awk '/^>/{print ">Cryptosporidium_muris" ++i; next}{print}' Cryptosporidium_muris.fa > header_Cryptosporidium_muris.fa
+	# Cryptosporidium tyzzeri isolate UGA55: CTYZ_00001415
+	awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' CTYZ_00001415.fa > Cryptosporidium_tyzzeri.fa
+			awk '/^>/{print ">Cryptosporidium_tyzzeri" ++i; next}{print}' Cryptosporidium_tyzzeri.fa > header_Cryptosporidium_tyzzeri.fa
+	# Cryptosporidium meleagridis strain UKMEL1: CmeUKMEL1_12945
+	awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' CmeUKMEL1_12945.fa > Cryptosporidium_meleagridis.fa
+	awk '/^>/{print ">Cryptosporidium_meleagridis" ++i; next}{print}' Cryptosporidium_meleagridis.fa > header_Cryptosporidium_meleagridis.fa
 
-# Saprolegnia parasitica CBS 223.65: SPRG_12989
-# Spraguea lophii 42_110: SLOPH_2073
-# Nematocida ausubeli ERTm2: NERG_01521
-# Cytauxzoon felis strain Winnie: CF001835
-#  Cryptosporidium hominis UdeA01: CHUDEA6_2320
 
-# Cryptosporidium muris RN66: CMU_007550
-# Cryptosporidium tyzzeri isolate UGA55: CTYZ_00001415
-# Cryptosporidium meleagridis strain UKMEL1: CmeUKMEL1_12945
 # Chromera velia CCMP2878: Cvel_9760 
 # Mitosporidium daphniae UGP3: DI09_160p40
 
