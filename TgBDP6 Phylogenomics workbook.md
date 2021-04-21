@@ -181,26 +181,29 @@ Next, I moved into the newly created directed to begin my analysis:
 	#Cryptosporidium andersoni isolate 30847: cand_006010
 		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' cand_006010.fa > Cryptosporidium_andersoni.fa
 		awk '/^>/{print ">Cryptosporidium_andersoni" ++i; next}{print}' Cryptosporidium_andersoni.fa > header_Cryptosporidium_andersoni.fa
-
 # Vitrella brassicaformis CCMP3155: Vbra_11206
 # Vittaforma corneae ATCC 50505: VICG_00309
 # Theileria parva strain Muguga: TP01_1030
 # Theileria orientalis strain Shintoku: TOT_010000975
 #Theileria annulata strain Ankara: TA16925
+
 # Saprolegnia parasitica CBS 223.65: SPRG_12989
 # Spraguea lophii 42_110: SLOPH_2073
 # Nematocida ausubeli ERTm2: NERG_01521
 # Cytauxzoon felis strain Winnie: CF001835
 #  Cryptosporidium hominis UdeA01: CHUDEA6_2320
+
 # Cryptosporidium muris RN66: CMU_007550
 # Cryptosporidium tyzzeri isolate UGA55: CTYZ_00001415
 # Cryptosporidium meleagridis strain UKMEL1: CmeUKMEL1_12945
 # Chromera velia CCMP2878: Cvel_9760 
 # Mitosporidium daphniae UGP3: DI09_160p40
+
 # Enterocytozoon bieneusi H348: EBI_27476
 # Enterospora canceri strain GB1: ECANGB1_970
 # Encephalitozoon hellem ATCC 50504: EHEL_081170
 # Entamoeba histolytica HM-1:IMSS: EHI_146100
+
 #  Enterocytozoon hepatopenaei strain TH1: EHP00_2617
 # Entamoeba moshkovskii Laredo: EMO_100830 
 # Mus musculus C57BL6J: ENSMUSG00000022914.15
@@ -224,8 +227,18 @@ Next, I moved into the newly created directed to begin my analysis:
 	# Encephalitozoon romaleae SJ-2008: EROM_081190 
 		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' EROM_081190.fa > Encephalitozoon_romaleae.fa
 			awk '/^>/{print ">Encephalitozoon_romaleae" ++i; next}{print}' Encephalitozoon_romaleae.fa > header_Encephalitozoon_romaleae.fa
-# Encephalitozoon intestinalis ATCC 50506: Eint_081180 
-# Aphanomyces astaci strain APO3: H257_13465 
-# Aphanomyces invadans NJM9701: H310_06274 
-# Anncaliia algerae PRA109: H311_04671 
-# Ordospora colligata OC4: M896_091190 
+	# Encephalitozoon intestinalis ATCC 50506: Eint_081180 
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' Eint_081180.fa > Encephalitozoon_intestinalis.fa
+		awk '/^>/{print ">Encephalitozoon_intestinalis" ++i; next}{print}' Encephalitozoon_intestinalis.fa > header_Encephalitozoon_intestinalis.fa
+	# Aphanomyces astaci strain APO3: H257_13465 
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' H257_13465.fa > Aphanomyces_astaci.fa
+		awk '/^>/{print ">Aphanomyces_astaci" ++i; next}{print}' Aphanomyces_astaci.fa > header_Aphanomyces_astaci.fa
+	# Aphanomyces invadans NJM9701: H310_06274 
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' H310_06274.fa > Aphanomyces_invadans.fa
+		awk '/^>/{print ">Aphanomyces_invadans" ++i; next}{print}' Aphanomyces_invadans.fa > header_Aphanomyces_invadans.fa
+	# Anncaliia algerae PRA109: H311_04671 
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' H311_04671.fa > Anncaliia_algerae.fa
+		awk '/^>/{print ">Anncaliia_algerae" ++i; next}{print}' Anncaliia_algerae.fa > header_Anncaliia_algerae.fa
+	# Ordospora colligata OC4: M896_091190 
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' M896_091190.fa > Ordospora_colligata.fa
+		awk '/^>/{print ">Ordospora_colligata" ++i; next}{print}' Ordospora_colligata.fa > header_Ordospora_colligata.fa
