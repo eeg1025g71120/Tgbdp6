@@ -220,12 +220,15 @@ Next, I moved into the newly created directed to begin my analysis:
 	# Cryptosporidium meleagridis strain UKMEL1: CmeUKMEL1_12945
 	awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' CmeUKMEL1_12945.fa > Cryptosporidium_meleagridis.fa
 	awk '/^>/{print ">Cryptosporidium_meleagridis" ++i; next}{print}' Cryptosporidium_meleagridis.fa > header_Cryptosporidium_meleagridis.fa
-
-
-# Chromera velia CCMP2878: Cvel_9760 
-# Mitosporidium daphniae UGP3: DI09_160p40
-
-# Enterocytozoon bieneusi H348: EBI_27476
+	# Chromera velia CCMP2878: Cvel_9760 
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' Cvel_9760.fa > Chromera_velia.fa
+		awk '/^>/{print ">Chromera_velia" ++i; next}{print}' Chromera_velia.fa > header_Chromera_velia.fa
+	# Mitosporidium daphniae UGP3: DI09_160p40
+	awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' DI09_160p40.fa > Mitosporidium_daphniae.fa
+		awk '/^>/{print ">Mitosporidium_daphniae" ++i; next}{print}' Mitosporidium_daphniae.fa > header_Mitosporidium_daphniae.fa
+	# Enterocytozoon bieneusi H348: EBI_27476
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' EBI_27476.fa > Enterocytozoon_bieneusi.fa
+		awk '/^>/{print ">Enterocytozoon_bieneusi" ++i; next}{print}' Enterocytozoon_bieneusi.fa > header_Enterocytozoon_bieneusi.fa
 # Enterospora canceri strain GB1: ECANGB1_970
 # Encephalitozoon hellem ATCC 50504: EHEL_081170
 # Entamoeba histolytica HM-1:IMSS: EHI_146100
