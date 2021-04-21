@@ -229,15 +229,27 @@ Next, I moved into the newly created directed to begin my analysis:
 	# Enterocytozoon bieneusi H348: EBI_27476
 		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' EBI_27476.fa > Enterocytozoon_bieneusi.fa
 		awk '/^>/{print ">Enterocytozoon_bieneusi" ++i; next}{print}' Enterocytozoon_bieneusi.fa > header_Enterocytozoon_bieneusi.fa
-# Enterospora canceri strain GB1: ECANGB1_970
-# Encephalitozoon hellem ATCC 50504: EHEL_081170
-# Entamoeba histolytica HM-1:IMSS: EHI_146100
-
-#  Enterocytozoon hepatopenaei strain TH1: EHP00_2617
-# Entamoeba moshkovskii Laredo: EMO_100830 
-# Mus musculus C57BL6J: ENSMUSG00000022914.15
-# Entamoeba nuttalli P19: ENU1_033640 
-
+	# Enterospora canceri strain GB1: ECANGB1_970
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' ECANGB1_970.fa > Enterospora_canceri.fa
+			awk '/^>/{print ">Enterospora_canceri" ++i; next}{print}' Enterospora_canceri.fa > header_Enterospora_canceri.fa
+	# Encephalitozoon hellem ATCC 50504: EHEL_081170
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' EHEL_081170.fa > Encephalitozoon_hellem.fa
+			awk '/^>/{print ">Encephalitozoon_hellem" ++i; next}{print}' Encephalitozoon_hellem.fa > header_Encephalitozoon_hellem.fa
+	# Entamoeba histolytica HM-1:IMSS: EHI_146100
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' EHI_146100.fa > Entamoeba_histolytica.fa
+				awk '/^>/{print ">Entamoeba_histolytica" ++i; next}{print}' Entamoeba_histolytica.fa > header_Entamoeba_histolytica.fa
+	#  Enterocytozoon hepatopenaei strain TH1: EHP00_2617
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' EHP00_2617.fa > Enterocytozoon_hepatopenaei.fa
+				awk '/^>/{print ">Enterocytozoon_hepatopenaei" ++i; next}{print}' Enterocytozoon_hepatopenaei.fa > header_Enterocytozoon_hepatopenaei.fa
+	# Entamoeba moshkovskii Laredo: EMO_100830 
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' EMO_100830.fa > Entamoeba_moshkovskii.fa
+					awk '/^>/{print ">Entamoeba_moshkovskii" ++i; next}{print}' Entamoeba_moshkovskii.fa > header_Entamoeba_moshkovskii.fa
+	# Mus musculus C57BL6J: ENSMUSG0000002291415
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' ENSMUSG0000002291415.fa > Mus_musculus.fa
+					awk '/^>/{print ">Mus_musculus" ++i; next}{print}' Mus_musculus.fa > header_Mus_musculus.fa
+	# Entamoeba nuttalli P19: ENU1_033640 
+	awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' ENU1_033640.fa > Entamoeba_nuttalli.fa
+					awk '/^>/{print ">Entamoeba_nuttalli" ++i; next}{print}' Entamoeba_nuttalli.fa > header_Entamoeba_nuttalli.fa
 	# Nematocida parisii : NEPG_00799 
 		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' NEPG_00799.fa > Nematocida_parisii.fa
 			awk '/^>/{print ">Nematocida_parisii" ++i; next}{print}' Nematocida_parisii.fa > header_Nematocida_parisii.fa
