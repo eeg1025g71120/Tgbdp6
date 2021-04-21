@@ -206,12 +206,24 @@ Next, I moved into the newly created directed to begin my analysis:
 # Mus musculus C57BL6J: ENSMUSG00000022914.15
 # Entamoeba nuttalli P19: ENU1_033640 
 
-# Nematocida parisii : NEPG_00799 
-# Nematocida displodere strain JUm2807: NEDG_00342
-# Nosema bombycis CQ1: NBO_74g0002 
-# Naegleria gruberi strain NEG-M: NAEGRDRAFT_78346  
-# Monocercomonoides exilis PA203: MONOS_15088 
-# Encephalitozoon romaleae SJ-2008: EROM_081190 
+	# Nematocida parisii : NEPG_00799 
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' NEPG_00799.fa > Nematocida_parisii.fa
+			awk '/^>/{print ">Nematocida_parisii" ++i; next}{print}' Nematocida_parisii.fa > header_Nematocida_parisii.fa
+	# Nematocida displodere strain JUm2807: NEDG_00342
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' NEDG_00342.fa > Nematocida_displodere.fa
+				awk '/^>/{print ">Nematocida_displodere" ++i; next}{print}' Nematocida_displodere.fa > header_Nematocida_displodere.fa
+	# Nosema bombycis CQ1: NBO_74g0002 
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' NBO_74g0002.fa > Nosema_bombycis.fa
+		awk '/^>/{print ">Nosema_bombycis" ++i; next}{print}' Nosema_bombycis.fa > header_Nosema_bombycis.fa
+	# Naegleria gruberi strain NEG-M: NAEGRDRAFT_78346 
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' NAEGRDRAFT_78346.fa > Naegleria_gruberi.fa
+		awk '/^>/{print ">Naegleria_gruberi" ++i; next}{print}' Naegleria_gruberi.fa > header_Naegleria_gruberi.fa
+	# Monocercomonoides exilis PA203: MONOS_15088 
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' MONOS_15088.fa > Monocercomonoides_exilis.fa
+			awk '/^>/{print ">Monocercomonoides_exilis" ++i; next}{print}' Monocercomonoides_exilis.fa > header_Monocercomonoides_exilis.fa
+	# Encephalitozoon romaleae SJ-2008: EROM_081190 
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' EROM_081190.fa > Encephalitozoon_romaleae.fa
+			awk '/^>/{print ">Encephalitozoon_romaleae" ++i; next}{print}' Encephalitozoon_romaleae.fa > header_Encephalitozoon_romaleae.fa
 # Encephalitozoon intestinalis ATCC 50506: Eint_081180 
 # Aphanomyces astaci strain APO3: H257_13465 
 # Aphanomyces invadans NJM9701: H310_06274 
