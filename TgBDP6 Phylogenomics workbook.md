@@ -283,3 +283,25 @@ Next, I moved into the newly created directed to begin my analysis:
 	# Ordospora colligata OC4: M896_091190 
 		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' M896_091190.fa > Ordospora_colligata.fa
 		awk '/^>/{print ">Ordospora_colligata" ++i; next}{print}' Ordospora_colligata.fa > header_Ordospora_colligata.fa
+	#Hammondia hammondi strain H.H.34: HHA_311625
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' HHA_311625.fa > Hammondia_hammondi.fa
+		awk '/^>/{print "> Hammondia_hammondi " ++i; next}{print}' Hammondia_hammondi.fa > header_Hammondia_hammondi.fa
+	# Cyclospora_cayetanensis: LOC34618198
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' LOC34618198.fa > Cyclospora_cayetanensis.fa
+		awk '/^>/{print ">Cyclospora_cayetanensis " ++i; next}{print}' Cyclospora_cayetanensis.fa > header_Cyclospora_cayetanensis.fa
+	# Sarcocystis_neurona: SN3_00801045  
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' SN3_00801045.fa > Sarcocystis_neurona.fa
+		awk '/^>/{print ">Sarcocystis_neurona " ++i; next}{print}' Sarcocystis_neurona.fa > header_Sarcocystis_neurona.fa
+	# Cystoisospora_suis: CSUI_000595  
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' CSUI_000595.fa > Cystoisospora_suis.fa
+		awk '/^>/{print ">Cystoisospora_suis" ++i; next}{print}' Cystoisospora_suis.fa > header_Cystoisospora_suis.fa
+	# Neospora_caninum: NCLIV_055410  
+		awk '{if(NR==1) {print $0} else {if($0 ~ /^>/) {print "\n"$0} else {printf $0}}}' NCLIV_055410.fa > Neospora_caninum.fa
+		awk '/^>/{print ">Neospora_caninum " ++i; next}{print}' Neospora_caninum.fa > header_Neospora_caninum.fa
+
+		cat header_Toxoplasma_gondii.fa header_Hepatospora_eriocheir.fa header_Amphiamblys_sp.fa header_Nosema_ceranae.fa header_Acanthamoeba_castellanii.fa header_Encephalitozoon_cuniculi.fa header_Babesia_bigemina.fa header_Babesia_bovis.fa header_Theileria_equi.fa header_Babesia_microti.fa header_Babesia_ovata.fa header_Babesia_divergens.fa header_Cryptosporidium_ubiquitum.fa header_Cryptosporidium_parvum.fa header_Cryptosporidium_andersoni.fa header_Vitrella_brassicaformis.fa header_Vittaforma_corneae.fa header_Theileria_parva.fa header_Theileria_orientalis.fa header_Theileria_annulata.fa header_Saprolegnia_parasitica.fa header_Spraguea_lophii.fa header_Nematocida_ausubeli.fa header_Cytauxzoon_felis.fa header_Cryptosporidium_hominis.fa header_Cryptosporidium_muris.fa header_Cryptosporidium_tyzzeri.fa header_Cryptosporidium_meleagridis.fa header_Chromera_velia.fa header_Mitosporidium_daphniae.fa header_Enterocytozoon_bieneusi.fa header_Enterospora_canceri.fa header_Encephalitozoon_hellem.fa header_Entamoeba_histolytica.fa header_Enterocytozoon_hepatopenaei.fa header_Entamoeba_moshkovskii.fa header_Mus_musculus.fa header_Entamoeba_nuttalli.fa header_Nematocida_parisii.fa header_Nematocida_displodere.fa header_Nosema_bombycis.fa header_Naegleria_gruberi.fa header_Monocercomonoides_exilis.fa header_Encephalitozoon_romaleae.fa header_Encephalitozoon_intestinalis.fa header_Aphanomyces_astaci.fa header_Aphanomyces_invadans.fa header_Anncaliia_algerae.fa header_Ordospora_colligata.fa header_Hammondia_hammondi.fa header_Cyclospora_cayetanensis.fa header_Sarcocystis_neurona.fa header_Cystoisospora_suis.fa header_Neospora_caninum.fa > TGBDP6_Phylogenetics_Trees_4.fa
+
+		mafft --auto TGBDP6_Phylogenetics_Trees_4.fa > Output_TGBDP6_Phylogenetics_Tree_4.fa
+
+	iqtree -s Output_TGBDP6_Phylogenetics_Tree_4.fa -m LG -bb 1000 -pre output
+	cat output.contree
